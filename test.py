@@ -56,9 +56,13 @@ if __name__ == "__main__":
 
 
     # For remote server only (Dagshub)
-    remote_server_uri='https://dagshub.com/riyosha/MLOps_project.mlflow'
-    mlflow.set_tracking_uri(remote_server_uri)
+    #remote_server_uri='https://dagshub.com/riyosha/MLOps_project.mlflow'
+    #mlflow.set_tracking_uri(remote_server_uri)
 
+    # For remote server only (AWS)
+    remote_server_uri='http://ec2-35-89-84-129.us-west-2.compute.amazonaws.com:5000/'
+    mlflow.set_tracking_uri(remote_server_uri)
+    
     with mlflow.start_run():
         lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
         lr.fit(train_x, train_y)
