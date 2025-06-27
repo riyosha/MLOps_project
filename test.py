@@ -60,7 +60,7 @@ if __name__ == "__main__":
     #mlflow.set_tracking_uri(remote_server_uri)
 
     # For remote server only (AWS)
-    remote_server_uri='http://ec2-35-89-84-129.us-west-2.compute.amazonaws.com:5000/'
+    remote_server_uri='http://ec2-54-185-39-145.us-west-2.compute.amazonaws.com:5000/'
     mlflow.set_tracking_uri(remote_server_uri)
     
     with mlflow.start_run():
